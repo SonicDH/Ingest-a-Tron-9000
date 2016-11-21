@@ -5,7 +5,10 @@ The Ingest-a-Tron 9000 is a (relatively) simple Windows Batch Scripting based to
 Almost the entire project is based on Open Source software including FFmpeg and FastCopy. The exception is the use of PsExec, though it can easily be adapted to use PAExec instead. 
 
 You will need to install and setup Fastcopy on the Ingestion Server and PsTools on both the Ingestion Server and Editing Workstation before this will work.
- 
+
+FastCopy: https://ipmsg.org/tools/fastcopy.html.en
+PsTools: https://technet.microsoft.com/en-us/sysinternals/pstools.aspx
+
 You're going to need to edit this to suit your specific details.
  
 List of Parameters to Change:
