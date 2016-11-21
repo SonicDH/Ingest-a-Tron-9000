@@ -1,0 +1,34 @@
+Ingest-a-Tron 9000 ReadMe
+ 
+The Ingest-a-Tron 9000 is a (relatively) simple Windows Batch Scripting based tool designed to automate the ingestion, transcoding, and transfer process of images and video from a remote ingestion server to an editing workstation. This frees up resources and time on the editing workstation by offloading, primarily, the transcoding of H.265 video to H.264 onto the ingestion server. The entire process can be triggered remotely from the editing workstation once the camera is connected to the ingestion server and files are automatically copied to the editing workstation once the process is complete.  
+
+Almost the entire project is based on Open Source software including FFmpeg and FastCopy. The exception is the use of PsExec, though it can easily be adapted to use PAExec instead. 
+
+You will need to install and setup Fastcopy on the Ingestion Server and PsTools on both the Ingestion Server and Editing Workstation before this will work.
+ 
+You're going to need to edit this to suit your specific details.
+ 
+List of Parameters to Change:
+-------------------------------
+ 
+USER_ON_EDITING_STATION - Your Windows username on the editing workstation. Find this by using the whoami command in CMD.exe
+ 
+EDITING_STATION_NAME_OR_IP - Your editing workstation's network name or IP address.
+ 
+CAMERA_DRIVE - The drive and directory of your camera and where it stores the media it makes.
+ 
+TRANSCODE_SOURCE_FOLDER - Where you want videos to be copied to before being transcoded. YOU MUST PUT THE FFMPEG FILES AND THIS SCRIPT IN THAT FOLDER FOR THIS TO WORK AS WRITTEN. Specifically, you'll need ffmpeg.exe and ffprobe.exe which can be found here: https://ffmpeg.zeranoe.com/builds/
+ 
+\\EDITING_STATION_NAME_OR_IP\SHARENAME\DIRECTORY - Where you want your media to go. This can be different across steps in the script. For example, I have images copied to a different directory than videos.
+ 
+TRANSCODE_OUTPUT_FOLDER - Where you want videos be saved after being transcoded. It's recommended that this be on the ingestion server rather than over the network. It will be copied to the editing workstation later.
+ 
+USER_ON_INGEST_SERVER - Your Windows username on the editing workstation. Find this by using the whoami command in CMD.exe If you use a Microsoft account to login, append "MicrosoftAccount\" to the beginning of your username.
+ 
+INGEST_SERVER_PASSWORD - The password for your ingest server user account.
+ 
+INGEST_SERVER_NAME_OR_IP - Your ingest server's network name or IP address
+ 
+TRANSCODE_SOURCE_FOLDER - Where you want videos to be copied to before being transcoded. YOU MUST PUT THE FFMPEG FILES AND TRANSCODE.BAT IN THAT FOLDER FOR THIS TO WORK AS WRITTEN. Specifically, you'll need ffmpeg.exe and ffprobe.exe which can be found here: https://ffmpeg.zeranoe.com/builds/
+ 
+Have fun!
