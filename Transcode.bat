@@ -3,7 +3,7 @@ REM List of Parameters to Change:
 REM USER_ON_SERVER - Your Windows Username. Find this by using the whoami command in CMD.exe
 REM SERVER_NAME_OR_IP - Your editing workstation's network name or IP address
 REM CAMERA_DRIVE - The drive and directory of your camera and where it stores the media it makes.
-REM TRANSCODE_SOURCE_FOLDER - Where you want videos to be copied to before being transcoded. YOU MUST PUT THE FFMPEG FILES AND THIS SCRIPT IN THAT FOLDER FOR THIS TO WORK AS WRITTEN
+REM TRANSCODE_SOURCE_FOLDER - Where you want videos to be copied to before being transcoded. YOU MUST PUT THE FFMPEG FILES AND THIS SCRIPT IN THAT FOLDER FOR THIS TO WORK AS WRITTEN. Specifically, you'll need ffmpeg.exe and ffprobe.exe which can be found here: https://ffmpeg.zeranoe.com/builds/
 REM \\SERVER_NAME_OR_IP\SHARENAME\DIRECTORY - Where you want your media to go. This can be different across steps in the script. For example, I have images copied to a different directory than videos.
 REM TRANSCODE_OUTPUT_FOLDER - Where you want videos be saved after being transcoded. It's recommended that this be on the ingestion server rather than over the network. It will be copied to the editing workstation later.
 REM Have fun!
